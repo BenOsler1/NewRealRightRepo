@@ -29,7 +29,7 @@ public class Unlock {
     private ModelManager model;
 
     /** Controls the camera capture and provides frames to the TensorFlow model for classification */
-    private CameraController cameraController;
+    private static CameraController cameraController;
 
     /** The Timeline to manage how often a prediction is made */
     private Timeline timeline;
@@ -60,6 +60,10 @@ public class Unlock {
      *
      * @param primaryStage the primary stage of the application
      */
+    public static CameraController getCam(){
+        return cameraController;
+    }
+
     public void setUpWindow(Stage primaryStage) {
         // Set up window to point to the primaryStage
         window = primaryStage;

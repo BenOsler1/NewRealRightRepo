@@ -1,5 +1,6 @@
 package com.codedotorg;
 
+import com.codedotorg.modelmanager.CameraController;
 public class AppLogic {
 
     /** The pin to unlock the app */
@@ -23,19 +24,19 @@ public class AppLogic {
      * @return the user PIN as a string
      */
     public String createUserPin(String predictedClass) {
+        CameraController cam = Unlock.getCam();
         String guess="";
         int delay=9999;
-        int confidenceGoal=90;
-        while(guess.Length()<4){
-            if(//Ai detects somthing){
-            if(certanty is biger than confidenceGoal){
+        float confidenceGoal=70;
+        while(guess.length()<4){
+            if(cam.getPredictedScore()>confidenceGoal){
                 delay-=1;
                 if(delay<0){
-                    guess+=whatver its seen;
+                    guess+=""+cam.getPredictedClass();
+                    System.out.println(cam.getPredictedClass());
                     delay=9999;
                 }
             }
-        }
         }
         return "";
     }
