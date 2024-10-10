@@ -73,8 +73,8 @@ public class AppLogic {
      * Generates a random 4-digit PIN number.
      * @return the generated PIN number as a string.
      */
-    private String createRandomPin() {
-        return ""+ (((int) 1+Math.random()*9998));
+    public static String createRandomPin() {
+        return ""+ (int) (((int) 1+Math.random()*9998));
     }
 
 }
