@@ -23,20 +23,6 @@ public class AppLogic {
      * @return the user PIN as a string
      */
     public String createUserPin(String predictedClass) {
-        String guess="";
-        int delay=9999;
-        int confidenceGoal=90;
-        while(guess.Length()<4){
-            if(//Ai detects somthing){
-            if(certanty is biger than confidenceGoal){
-                delay-=1;
-                if(delay<0){
-                    guess+=whatver its seen;
-                    delay=9999;
-                }
-            }
-        }
-        }
         return "";
     }
 
