@@ -1,6 +1,7 @@
 package com.codedotorg;
 
 import com.codedotorg.modelmanager.CameraController;
+import com.codedotorg.modelmanager.ModelManager;
 public class AppLogic {
 
     /** The pin to unlock the app */
@@ -23,21 +24,7 @@ public class AppLogic {
      * @param predictedClass the predicted class from the machine learning model
      * @return the user PIN as a string
      */
-    public String createUserPin(String predictedClass) {
-        CameraController cam = Unlock.getCam();
-        String guess="";
-        int delay=9999;
-        float confidenceGoal=70;
-        while(guess.length()<4){
-            if(cam.getPredictedScore()>confidenceGoal){
-                delay-=1;
-                if(delay<0){
-                    guess+=""+cam.getPredictedClass();
-                    System.out.println(cam.getPredictedClass());
-                    delay=9999;
-                }
-            }
-        }
+    public String createUserPin(String predictedClass){ 
         return "";
     }
 
@@ -56,8 +43,11 @@ public class AppLogic {
      * @return a string indicating whether the PIN is correct or not
      */
     public String getPinStatus(String userPin) {
-        
-        return "";
+        if (userPin.equals(pin)) {
+            return "Correct PIN!";
+        } else {
+            return "Incorrect PIN!";
+        }
     }
     
     /**

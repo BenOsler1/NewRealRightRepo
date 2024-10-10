@@ -29,7 +29,7 @@ public class Unlock {
     private ModelManager model;
 
     /** Controls the camera capture and provides frames to the TensorFlow model for classification */
-    private static CameraController cameraController;
+    private  CameraController cameraController;
 
     /** The Timeline to manage how often a prediction is made */
     private Timeline timeline;
@@ -60,7 +60,7 @@ public class Unlock {
      *
      * @param primaryStage the primary stage of the application
      */
-    public static CameraController getCam(){
+    public CameraController getCam(){
         return cameraController;
     }
 
