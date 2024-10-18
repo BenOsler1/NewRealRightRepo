@@ -25,7 +25,46 @@ public class AppLogic {
      * @return the user PIN as a string
      */
     public String createUserPin(String predictedClass){ 
-        return "";
+        String userResponse = predictedClass.substring(predictedClass.indexOf("") + 1);
+        switch (userResponse) {
+            case "1":
+                user += 1;
+                break;
+            case "2":
+                user += 2;
+                break;
+            case "3":
+                user += 3;
+                break;
+            case "4":
+                user += 4;
+                break;
+                
+            case "5":
+                user += 5;
+                break;
+            case "6":
+                user += 6;
+                break;
+            case "7":
+                user += 7;
+                break;
+            case "8":
+                user += 8;
+                break;
+            case "9":
+                user += 9;
+                break;
+            case "0":
+                user += 0;
+                break;
+        
+            default:
+                break;
+
+
+        }
+        return user;
     }
 
     /**
