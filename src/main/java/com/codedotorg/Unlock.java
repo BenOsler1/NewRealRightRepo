@@ -115,6 +115,7 @@ public class Unlock {
      * sets the action to execute after the pause, and starts the pause transition.
      */
     public void updateApp() {
+        loadMainScene("Correct PIN!")
         timeline = new Timeline(new KeyFrame(Duration.seconds(3), event -> {
             // Get the predicted class and score from the CameraController
             String predictedClass = cameraController.getPredictedClass();
